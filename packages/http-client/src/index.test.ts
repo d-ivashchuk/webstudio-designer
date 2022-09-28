@@ -21,11 +21,4 @@ describe("getProjectDetails", () => {
       "Project 7ec397c6-b3d0-4967-9073-9d83623fcf8e needs to be published first"
     );
   });
-  test("invalid api url", async () => {
-    const response = await loadProject({
-      apiUrl: "invalid url",
-      projectId: existingProjectId,
-    });
-    expect(response).toStrictEqual({ errors: "Invalid URL" });
-  });
 });
